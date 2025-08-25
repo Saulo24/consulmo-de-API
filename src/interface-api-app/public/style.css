@@ -1,0 +1,128 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --background: #f4f6fb;
+    --white: #fff;
+    --gray: #e5e7eb;
+    --text: #22223b;
+    --error: #e63946;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(34, 34, 59, 0.08);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin: 32px 0 24px 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.container {
+    background: var(--white);
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 32px 24px 24px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid var(--gray);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: border 0.2s;
+    outline: none;
+    background: #f9fafb;
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary);
+    background: var(--white);
+}
+
+button {
+    padding: 12px 0;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 1px 4px rgba(37, 99, 235, 0.08);
+}
+
+button:hover, button:focus {
+    background: var(--primary-dark);
+}
+
+#results {
+    margin-top: 28px;
+    min-height: 40px;
+}
+
+.result-card {
+    background: #f1f5f9;
+    border-radius: var(--radius);
+    box-shadow: 0 1px 6px rgba(34, 34, 59, 0.06);
+    padding: 18px 16px;
+    margin-top: 8px;
+    font-size: 1rem;
+    word-break: break-word;
+}
+
+pre {
+    background: #e0e7ef;
+    border-radius: 6px;
+    padding: 10px;
+    overflow-x: auto;
+    font-size: 0.98rem;
+}
+
+.error {
+    color: var(--error);
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        padding: 18px 4vw 16px 4vw;
+    }
+    h1 {
+        font-size: 1.4rem;
+        margin: 18px 0 12px 0;
+    }
+    button, input[type="text"] {
+        font-size: 1rem;
+    }
+}
